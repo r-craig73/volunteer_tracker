@@ -23,6 +23,7 @@ attr_accessor(:name)
       project_id = item.fetch("project_id")
       name = item.fetch("name")
       projects.push(Project.new({:title => title, :project_id => project_id, :name => name, :id => id}))
+      # binding.pry
     end
     projects
   end
