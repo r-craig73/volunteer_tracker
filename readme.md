@@ -19,7 +19,8 @@
 7. Returns project's id (nil) before saving, returns project id value (integer) after saving.
 8. Returns a project by finding the project_id number.
 9. Allow user to delete all projects after saving.
-10. Allow user to update a project after saving (ongoing).
+10. Allow user to update a project title after saving.
+11. TBD
 
 ### Logic specs (rspec), class Volunteer
 1. Returns true when two names are the same.

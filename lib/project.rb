@@ -48,10 +48,9 @@ attr_accessor(:name)
   end
 
   def update(attributes)
-    #@title = attributes.fetch(:title, @title)
-    #@id = self.id()
-    #DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};"")
-
+    @title = attributes.fetch(:title, @title)
+    @id = self.id()
+    DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
   end
 
 
