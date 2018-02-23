@@ -9,6 +9,11 @@ attr_accessor(:project_id)
     @project_id = attributes.fetch(:project_id)
   end
 
+  def ==(another)
+    self.name().==(another.name())
+  end
+
+
   def self.all
 
 

@@ -25,8 +25,8 @@ describe Project do
 
   describe '#==' do
     it 'is the same project if two projects have the same title' do
-      project1 = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => nil, :id => nil})
-      project2 = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => nil, :id => nil})
+      project1 = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => 7, :id => nil})
+      project2 = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => 9, :id => nil})
       expect(project1 == project2).to eq true
     end
   end
