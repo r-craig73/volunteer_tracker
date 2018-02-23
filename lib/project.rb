@@ -10,10 +10,16 @@ attr_accessor(:name)
     @name = attributes.fetch(:name)
   end
 
+  def ==(another)
+    self.title().==(another.title())
+  end
+
   def self.all
 
 
   end
+
+
 
 
 end
