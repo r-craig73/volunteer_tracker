@@ -33,7 +33,7 @@ describe Project do
 
   context '.all' do
     it 'is empty to start' do
-      expect(Project.all).to(eq([]))
+      expect(Project.all()).to(eq([]))
     end
 
     it 'returns all projects' do
@@ -41,7 +41,7 @@ describe Project do
       project1.save
       project2 = Project.new({:title => 'Teaching Ruby to Kids', :name => nil, :project_id => 11, :id => nil})
       project2.save
-      expect(Project.all).to(eq([project1, project2]))
+      expect(Project.all()).to(eq([project1, project2]))
     end
   end
 
@@ -49,7 +49,7 @@ describe Project do
     it 'saves a project to the database' do
       project = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => 8, :id => nil})
       project.save
-      expect(Project.all).to(eq([project]))
+      expect(Project.all()).to(eq([project]))
     end
   end
 
@@ -83,13 +83,13 @@ describe Project do
   #     expect(project.title).to eq 'Teaching Ruby to Kids'
   #   end
   # end
-  
+
   context '#delete' do
     it 'allows a user to delete a project' do
       project = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => 8, :id => nil})
-      project.save
-      project.delete
-      expect(Project.all).to eq []
+      project.save()
+      project.delete()
+      expect(Project.all()).to(eq([]))
     end
   end
 end

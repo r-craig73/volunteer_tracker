@@ -14,7 +14,7 @@ attr_accessor(:name)
     self.title().==(another.title())
   end
 
-  def self.all
+  def self.all()
     returned_projects = DB.exec("SELECT * FROM projects;")
     projects = []
     returned_projects.each() do |item|
@@ -27,7 +27,7 @@ attr_accessor(:name)
     projects
   end
 
-  def save
+  def save()
     saved_project = DB.exec("INSERT INTO projects (title, project_id, name) VALUES ('#{@title}', '#{@project_id}', '#{@name}') RETURNING id;")
     @id = saved_project.first().fetch("id").to_i()
   end
@@ -40,6 +40,11 @@ attr_accessor(:name)
       end
     end
     identified_project
+  end
+
+  def delete()
+    #DB.exec("DELETE FROM projects WHERE id = #{self.id()};")
+    DB.exec("DELETE FROM projects WHERE id >= 0;")
   end
 
 end
