@@ -23,7 +23,6 @@ attr_accessor(:name)
       project_id = item.fetch("project_id")
       name = item.fetch("name")
       projects.push(Project.new({:title => title, :project_id => project_id, :name => name, :id => id}))
-      # binding.pry
     end
     projects
   end
@@ -33,6 +32,14 @@ attr_accessor(:name)
     @id = saved_project.first().fetch("id").to_i()
   end
 
-
+  def self.find(id)
+    identified_project = nil
+    Project.all().each do |project|
+      if project.id().==(id)
+        identified_project = project
+      end
+    end
+    identified_project
+  end
 
 end

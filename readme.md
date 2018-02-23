@@ -16,9 +16,9 @@
 4. Saves all projects.
 5. Returns all projects from the database to a saved array, each element is a project variable.
 6. Returns project's title.
-7. Returns project's id (nil) before saving.
-8. Returns project's id value (integer) after saving.
-9. Returns a project by finding the project_id number (ongoing).
+7. Returns project's id (nil) before saving, returns project id value (integer) after saving.
+8. Returns a project by finding the project_id number.
+9. TBD
 
 ### Logic specs (rspec), class Volunteer
 1. Returns true when two names are the same.
@@ -41,3 +41,7 @@
 * Ruby and Sinatra (application)
 * Postgres server (database)
 * Rspec and Capybara (testing)
+
+### MIT License
+
+Copyright (c) 2018 **_Ron Craig (ron.craig@comcast.net)_**
