@@ -3,7 +3,7 @@
 #### by Ron Craig (ron.craig@comcast.net)
 #### updated 02/23/2018
 
-### GitHub repository:
+### GitHub repository: https://github.com/r-craig73/volunteer_tracker
 
 ## Description
 ### An app using ruby, BDD, Sinatra and CRUD routing to track volunteers and projects.
