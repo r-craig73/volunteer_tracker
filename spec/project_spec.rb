@@ -39,7 +39,7 @@ describe Project do
     it 'returns all projects' do
       project1 = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => 8, :id => nil})
       project1.save
-      project2 = Project.new({:title => 'Teaching Ruby to Kids', :project_id => 11, :id => nil})
+      project2 = Project.new({:title => 'Teaching Ruby to Kids', :name => nil, :project_id => 11, :id => nil})
       project2.save
       expect(Project.all).to eq [project1, project2]
     end
