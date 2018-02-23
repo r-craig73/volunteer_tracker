@@ -27,6 +27,10 @@ attr_accessor(:name)
     projects
   end
 
+  def save
+    saved_project = DB.exec("INSERT INTO projects (title, project_id, name) VALUES ('#{@title}', '#{@project_id}', '#{@name}') RETURNING id;")
+    @id = saved_project.first().fetch("id").to_i()
+  end
 
 
 
