@@ -48,7 +48,7 @@ describe Project do
   describe '#save' do
     it 'saves a project to the database' do
       project = Project.new({:title => 'Teaching Kids to Code', :name => nil, :project_id => 8, :id => nil})
-      project.save
+      project.save()
       expect(Project.all()).to(eq([project]))
     end
   end

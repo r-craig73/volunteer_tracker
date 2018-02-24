@@ -26,19 +26,19 @@
 1. Returns true when two volunteer names are the same.
 2. Returns volunteer name.
 3. Returns volunteer project_id number.
-4. TBD
+4. Returns all volunteers from the database to a saved array, each element is a project volunteer.
 5. TBD
 6. TBD
 
 ## Setup/Instructions
+### Create and edit Gemfile in the project's root directory
 ### Install rubygems (Rspec, pry, Capybara and Sinatra)
-### In the root directory...
-#### Create and edit Gemfile
-#### Install gem bundler ($ gem install bundler; $ bundle install; $bundle update)
+### In the project's root directory...
+* Install gem bundler ($ gem install bundler; $ bundle install; $bundle update)
 ### Install Postgres
 ### Open another terminal window, go to home directory ($ cd ~)
-#### Install Postgres ($gem install pg)
-#### Open Postgres ($ psql)
+* Install Postgres ($gem install pg)
+* Open Postgres ($ psql)
 
 ## Known Bugs
 ### None at the moment.
