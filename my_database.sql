@@ -40,9 +40,7 @@ SET default_with_oids = false;
 
 CREATE TABLE projects (
     id integer NOT NULL,
-    title character varying,
-    name character varying,
-    project_id integer
+    title character varying
 );
 
 
@@ -123,7 +121,7 @@ ALTER TABLE ONLY volunteers ALTER COLUMN id SET DEFAULT nextval('volunteers_id_s
 -- Data for Name: projects; Type: TABLE DATA; Schema: public; Owner: ronc
 --
 
-COPY projects (id, title, name, project_id) FROM stdin;
+COPY projects (id, title) FROM stdin;
 \.
 
 
