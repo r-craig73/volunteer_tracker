@@ -12,7 +12,7 @@
 ### Logic specs (rspec), class Project
 1. Returns true when two projects have the same title.
 2. Returns true when the volunteer's name is the same.
-3. Create an empty array.
+3. Create an empty projects array.
 4. Saves all projects.
 5. Returns all projects from the database to a saved array, each element is a project variable.
 6. Returns project's title.
@@ -20,15 +20,16 @@
 8. Returns a project by finding the project_id number.
 9. Allow user to delete all projects after saving.
 10. Allow user to update a project title after saving.
-11. TBD
+11. Returns a lit of volunteers for a specific project (ongoing).
 
 ### Logic specs (rspec), class Volunteer
 1. Returns true when two volunteer names are the same.
-2. Returns volunteer name.
-3. Returns volunteer project_id number.
-4. Returns all volunteers from the database to a saved array, each element is a project volunteer.
-5. TBD
-6. TBD
+2. Returns a volunteer's name.
+3. Returns a volunteer's project_id number.
+4. Returns volunteer's information from the database to a saved array, each element is a volunteer.
+5. Create an empty volunteer array.
+6. Save a volunteer into the database.
+7. TBD
 
 ## Setup/Instructions
 ### Create and edit Gemfile in the project's root directory
