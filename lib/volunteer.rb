@@ -30,5 +30,15 @@ attr_accessor(:project_id)
     volunteers
   end
 
+  def self.find(id)
+    identified_volunteer = nil
+    Volunteer.all().each do |volunteer|
+      if volunteer.id().==(id)
+        identified_volunteer = volunteer
+      end
+    end
+    identified_volunteer
+  end
+
 
 end
