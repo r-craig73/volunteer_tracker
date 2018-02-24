@@ -1,7 +1,4 @@
 require('spec_helper')
-require('volunteer')
-require('project')
-
 
 describe Volunteer do
   describe '#name' do

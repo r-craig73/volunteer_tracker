@@ -9,7 +9,7 @@
 ### An app using ruby, BDD, Sinatra and CRUD routing to track volunteers and projects.
 
 ## Specifications
-### Logic specs (rspec), class Project
+### back end specs: class Project
 1. Returns true when two projects have the same title.
 2. Returns true when the volunteer's name is the same.
 3. Create an empty projects array.
@@ -20,9 +20,9 @@
 8. Returns a project by finding the project's primary id number.
 9. Allow user to delete all projects after saving.
 10. Allow user to update a project title after saving.
-11. Returns a lit of volunteers for a specific project (ongoing).
+11. Returns a list of volunteers for a specific project.
 
-### Logic specs (rspec), class Volunteer
+### back end specs: class Volunteer
 1. Returns true when two volunteer names are the same.
 2. Returns a volunteer's name.
 3. Returns a volunteer's project_id number.
@@ -30,6 +30,8 @@
 5. Create an empty volunteer array.
 6. Save a volunteer into the database.
 7. Returns a volunteer by finding the volunteer's primary id number.
+
+### Sinatra
 
 ## Setup/Instructions
 ### Create and edit Gemfile in the project's root directory
