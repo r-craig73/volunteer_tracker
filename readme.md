@@ -23,8 +23,12 @@
 11. TBD
 
 ### Logic specs (rspec), class Volunteer
-1. Returns true when two names are the same.
-2. TBD
+1. Returns true when two volunteer names are the same.
+2. Returns volunteer name.
+3. Returns volunteer project_id number.
+4. TBD
+5. TBD
+6. TBD
 
 ## Setup/Instructions
 ### Install rubygems (Rspec, pry, Capybara and Sinatra)
