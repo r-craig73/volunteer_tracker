@@ -17,7 +17,7 @@
 5. Returns all projects from the database to a saved array, each element is a project variable.
 6. Returns project's title.
 7. Returns project's id (nil) before saving, returns project id value (integer) after saving.
-8. Returns a project by finding the project_id number.
+8. Returns a project by finding the project's primary id number.
 9. Allow user to delete all projects after saving.
 10. Allow user to update a project title after saving.
 11. Returns a lit of volunteers for a specific project (ongoing).
@@ -29,7 +29,7 @@
 4. Returns volunteer's information from the database to a saved array, each element is a volunteer.
 5. Create an empty volunteer array.
 6. Save a volunteer into the database.
-7. TBD
+7. Returns a volunteer by finding the volunteer's primary id number.
 
 ## Setup/Instructions
 ### Create and edit Gemfile in the project's root directory

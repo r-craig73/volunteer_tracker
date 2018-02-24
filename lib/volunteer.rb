@@ -18,8 +18,6 @@ attr_accessor(:project_id)
     @id = saved_volunteer.first().fetch("id").to_i()
   end
 
-
-
   def self.all
     returned_volunteers = DB.exec("SELECT * FROM volunteers;")
     volunteers = []
