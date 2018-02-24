@@ -40,5 +40,4 @@ attr_accessor(:project_id)
     identified_volunteer
   end
 
-
 end

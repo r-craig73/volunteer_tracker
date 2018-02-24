@@ -33,11 +33,9 @@
 
 ## Setup/Instructions
 ### Create and edit Gemfile in the project's root directory
-### Install rubygems (Rspec, pry, Capybara and Sinatra)
-### In the project's root directory...
+### Install rubygems (Rspec, pry, Capybara and Sinatra).  In the project's root directory...
 * Install gem bundler ($ gem install bundler; $ bundle install; $bundle update)
-### Install Postgres
-### Open another terminal window, go to home directory ($ cd ~)
+### Install Postgres.  Open another terminal window, go to home directory ($ cd ~)...
 * Install Postgres ($gem install pg)
 * Open Postgres ($ psql)
 

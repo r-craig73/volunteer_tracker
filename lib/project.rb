@@ -1,13 +1,10 @@
 class Project
 
 attr_reader(:id, :title, :project_id)
-attr_accessor(:name)
 
   def initialize(attributes)
-    @id = attributes.fetch(:id)
     @title = attributes.fetch(:title)
-    @project_id = attributes.fetch(:project_id)
-    @name = attributes.fetch(:name)
+    @id = attributes.fetch(:id)
   end
 
   def ==(another)
@@ -18,17 +15,15 @@ attr_accessor(:name)
     returned_projects = DB.exec("SELECT * FROM projects;")
     projects = []
     returned_projects.each() do |item|
-      id = item.fetch("id").to_i()
       title = item.fetch("title")
-      project_id = item.fetch("project_id")
-      name = item.fetch("name")
-      projects.push(Project.new({:title => title, :project_id => project_id, :name => name, :id => id}))
+      id = item.fetch("id").to_i()
+      projects.push(Project.new({:title => title, :id => id}))
     end
     projects
   end
 
   def save()
-    saved_project = DB.exec("INSERT INTO projects (title, project_id, name) VALUES ('#{@title}', '#{@project_id}', '#{@name}') RETURNING id;")
+    saved_project = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
     @id = saved_project.first().fetch("id").to_i()
   end
 
@@ -43,7 +38,6 @@ attr_accessor(:name)
   end
 
   def delete()
-    #DB.exec("DELETE FROM projects WHERE id = #{self.id()};")
     DB.exec("DELETE FROM projects WHERE id >= 0;")
   end
 
@@ -53,5 +47,11 @@ attr_accessor(:name)
     DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
   end
 
+  def volunteers()
+    # list_volunteers = []
+    #
+    # DB.exec("SELECT name, project_id FROM volunteers;")
+    # DB.exec("SELECT project_id FROM projects;")
+  end
 
 end
