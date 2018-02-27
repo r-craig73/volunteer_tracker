@@ -32,7 +32,7 @@
 7. Returns a volunteer by finding the volunteer's primary id number.
 
 ### Front end specs: Sinatra
-1. The user on the home page should be able to input a project.  Once created, the application should direct the user back to the home page. (ongoing)
+1. The user on the home page should be able to input a project.  Once created, the application should direct the user back to the home page.
 2. The user should be able to click on the project to see its detail.  The detail page should include a form where the project can be updated.  After submitting the project's detail, the user can be directed to either the home page or that project's detail page. (ongoing)
 3. The user should be able to to navigate to the project's detail page and be able to delete the project.  The user will then be directed to the home page.  The project should no longer be on the list of projects. (ongoing)
 4. The user should be able to click on a project detail page and see a list of all volunteers working on that project.  The user should be able to click on a volunteer to see the volunteer's detail page. (ongoing)

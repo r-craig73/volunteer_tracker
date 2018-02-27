@@ -12,10 +12,10 @@ get('/') do
   erb(:homepage)
 end
 
-# post('/projects') do
-#   title = params.fetch('title')
-#   project = Project.new({:title => title, :id => nil})
-#   project.save()
-#   @projects = Project.all()
-#   erb(:success)
-# end
+post('/projects') do
+  title = params.fetch('title')
+  project = Project.new({:title => title, :id => nil})
+  project.save()
+  @projects = Project.all()
+  erb(:success)
+end
