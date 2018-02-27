@@ -19,3 +19,8 @@ post('/projects') do
   @projects = Project.all()
   erb(:success)
 end
+
+patch('/projects/:id') do
+
+  erb(:project)
+end
