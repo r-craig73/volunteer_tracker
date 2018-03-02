@@ -36,8 +36,8 @@ patch('/projects/:id') do
 end
 
 delete('/projects/:id') do
-  #@projects = Project.find(param.fetch('id').toi())
-  #@projects.delete()
-  #@projects = List.all()
-  erb(:success)
+  @project = Project.find(params.fetch('id').to_i())
+  @project.delete()
+  @projects = Project.all()
+  erb(:project_edit)
 end

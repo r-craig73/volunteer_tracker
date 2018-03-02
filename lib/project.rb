@@ -38,7 +38,7 @@ attr_reader(:id, :title)
   end
 
   def delete()
-    DB.exec("DELETE FROM projects WHERE id >= 0;")
+    DB.exec("DELETE FROM projects WHERE id = #{self.id()}")
   end
 
   def update(attributes)
