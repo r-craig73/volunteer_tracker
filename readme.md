@@ -41,13 +41,13 @@
 ## Setup/Instructions
 ### Create and edit Gemfile in the project's root directory
 ### Install rubygems (Rspec, pry, Capybara and Sinatra).  In the project's root directory...
-* Install gem bundler ($ gem install bundler; $ bundle install; $bundle update)
+* Install gem bundler ($ gem install bundler; $ bundle install; $ bundle update)
 ### Install Postgres.  Open another terminal window, go to home directory ($ cd ~)...
-* Install Postgres ($gem install pg)
+* Install Postgres ($ gem install pg)
 * Open Postgres ($ psql)
 
 ## Known Bugs
-### None at the moment.
+### Issue passing Sinatra volunteer viewing spec.
 
 ## Technology used
 * Ruby and Sinatra (application)
