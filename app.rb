@@ -9,18 +9,35 @@ require('pry')
 DB = PG.connect({:dbname => 'volunteer_tracker'})
 
 get('/') do
-  erb(:homepage)
+  @projects = Project.all()
+  erb(:index)
 end
 
-post('/projects') do
-  title = params.fetch('title')
+post('/') do
+  title = params[:title]
   project = Project.new({:title => title, :id => nil})
   project.save()
   @projects = Project.all()
-  erb(:success)
+  erb(:index)
+end
+
+get('/projects/:id') do
+  @project = Project.find(params.fetch('id').to_i())
+  # binding.pry
+  erb(:project_edit)
 end
 
 patch('/projects/:id') do
+  title = params.fetch('title')
+  @project = Project.find(params.fetch('id').to_i())
+  @project.update({:title => title})
+  @projects = Project.all()
+  erb(:project_edit)
+end
 
-  erb(:project)
+delete('/projects/:id') do
+  #@projects = Project.find(param.fetch('id').toi())
+  #@projects.delete()
+  #@projects = List.all()
+  erb(:success)
 end

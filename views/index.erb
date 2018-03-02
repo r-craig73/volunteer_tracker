@@ -1,0 +1,21 @@
+<h2>Volunteer Tracker</h2>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="title">Please input the project's title</label>
+    <input id="title" name="title" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-info">Create Project</button>
+</form>
+
+<% if @projects.any?() %>
+  <h3>Here is your list of projects.</h3>
+  <h3>Click on the project's title below to view more details:</h3>
+  <ul>
+    <% @projects.each() do |project| %>
+      <li><a href="projects/<%= project.id()%>"><%= project.title() %></a></li>
+    <% end %>
+  </ul>
+    <% else %>
+      <p>There are no projects!</p>
+<% end %>
