@@ -9,8 +9,22 @@
   <br>
 <form action="/projects/<%= @project.id() %>" method="post">
   <input name="_method" type="hidden" value="delete">
-  
   <button type="submit">Delete Project</button>
 </form>
-  <br>
-  <p><a href="/">Return to Home Page</a></p>
+<hr>
+
+<h2>Add a volunteer to...</h2>
+<h2><%= @project.title() %></h2>
+
+<form action="/volunteers" method="post">
+  <input id="project_id" name="project_id" type="hidden" value="<%= @project.id() %>">
+
+  <label for="name">Volunteer:</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Add volunteer</button>
+</form>
+
+<hr>
+
+<p><a href="/">Return to Home Page</a></p>

@@ -10,6 +10,7 @@ DB = PG.connect({:dbname => 'volunteer_tracker'})
 
 get('/') do
   @projects = Project.all()
+  @volunteers = Volunteer.all()
   erb(:index)
 end
 
@@ -23,12 +24,12 @@ end
 
 get('/projects/:id') do
   @project = Project.find(params.fetch('id').to_i())
-  # binding.pry
+  #@volunteers = Volunteer.all()
   erb(:project_edit)
 end
 
 patch('/projects/:id') do
-  title = params.fetch('title')
+  title = params[:title]
   @project = Project.find(params.fetch('id').to_i())
   @project.update({:title => title})
   @projects = Project.all()
@@ -40,4 +41,13 @@ delete('/projects/:id') do
   @project.delete()
   @projects = Project.all()
   erb(:project_edit)
+end
+
+post('/volunteers') do
+  name = params[:name]
+  project_id = params.fetch("project_id").to_i()
+  @project = Project.find(project_id)
+  @volunteer = Volunteer.new({:name => name, :project_id => project_id, :id => nil})
+  @volunteer.save()
+  erb(:volunteer_success)
 end
