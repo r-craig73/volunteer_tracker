@@ -1,7 +1,7 @@
 # volunteer_tracker
 
 #### by Ron Craig (ron.craig@comcast.net)
-#### updated 02/23/2018
+#### started 02/23/2018, last update 03/02/2018 (MM/DD/YYYY)
 
 ### GitHub repository: https://github.com/r-craig73/volunteer_tracker
 
