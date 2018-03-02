@@ -10,7 +10,7 @@
 
 <% if @projects.any?() %>
   <h3>Here is your list of projects.</h3>
-  <h3>Click on the project below to view more details:</h3>
+  <h3>Click on the project below for more details:</h3>
   <ul>
     <% @projects.each() do |project| %>
       <li><a href="projects/<%= project.id()%>"><%= project.title() %></a></li>
@@ -19,3 +19,6 @@
     <% else %>
       <h3>There are no projects!</h3>
 <% end %>
+
+<hr>
+<p><a href="/volunteers">View a list of volunteers</a></p>

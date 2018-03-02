@@ -1,0 +1,15 @@
+<% if @volunteers.any?() %>
+  <h3>Here is your list of volunteers.</h3>
+  <h3>Click on a name below for more details:</h3>
+  <ul>
+    <% @volunteers.each() do |volunteer| %>
+      <li><a href="volunteers/<%= volunteer.name() %>"><%= volunteer.name() %></li>
+    <% end %>
+  </ul>
+    <% else %>
+      <h3>There are no volunteers!</h3>
+<% end %>
+
+<hr>
+
+<p><a href="/">Return to Home Page</a></p>
