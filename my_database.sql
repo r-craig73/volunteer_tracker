@@ -122,6 +122,7 @@ ALTER TABLE ONLY volunteers ALTER COLUMN id SET DEFAULT nextval('volunteers_id_s
 --
 
 COPY projects (id, title) FROM stdin;
+555	Teach ruby to kids
 \.
 
 
@@ -137,14 +138,14 @@ COPY volunteers (id, name, project_id) FROM stdin;
 -- Name: projects_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ronc
 --
 
-SELECT pg_catalog.setval('projects_id_seq', 416, true);
+SELECT pg_catalog.setval('projects_id_seq', 556, true);
 
 
 --
 -- Name: volunteers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ronc
 --
 
-SELECT pg_catalog.setval('volunteers_id_seq', 247, true);
+SELECT pg_catalog.setval('volunteers_id_seq', 332, true);
 
 
 --
