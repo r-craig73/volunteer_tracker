@@ -1,9 +1,8 @@
 <% if @volunteers.any?() %>
   <h3>Here is your list of volunteers.</h3>
-  <h3>Click on a name below for more details:</h3>
   <ul>
     <% @volunteers.each() do |volunteer| %>
-      <li><a href="volunteers/<%= volunteer.name() %>"><%= volunteer.name() %></li>
+      <li><%= volunteer.name() %></li>
     <% end %>
   </ul>
     <% else %>

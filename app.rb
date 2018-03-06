@@ -68,6 +68,6 @@ post('/volunteers') do
   @project = Project.find(project_id)
   @volunteer = Volunteer.new({:name => name, :project_id => project_id, :id => nil})
   @volunteer.save()
-  @volunteers = Volunteer.all()
+  @volunteers = Volunteer.all
   erb(:volunteers)
 end
